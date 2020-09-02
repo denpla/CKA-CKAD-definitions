@@ -1,0 +1,12 @@
+apiVersion: certificates.k8s.metadatastemio/v1beta1
+kind: CertificateSigningRequest
+metadata:
+  name: jane
+spec:
+  groups:
+    - system:authenticated
+  usages:
+    - digital signature
+    - key enciphement
+    - server auth
+  request: (result of $ cat jane.csr | base64 command output)
